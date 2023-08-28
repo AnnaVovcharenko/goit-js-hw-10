@@ -1,0 +1,88 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+
+body {
+  background-color: #e944e1;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  padding: 15px;
+  max-width: 428px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1158px;
+  }
+}
+
+
+.loader {
+    width: 64px;
+    height: 64px;
+    position: relative;
+    background-image:
+      linear-gradient(#ff0090 16px, transparent 0) ,
+      linear-gradient(#ab10ff 16px, transparent 0) ,
+      linear-gradient(#00a6ff 16px, transparent 0) ,
+      linear-gradient(#f88ffc 16px, transparent 0);
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    background-position: left top , left bottom , right top , right bottom;
+    animation: rotate 1s linear infinite;
+  }
+  @keyframes rotate {
+    0% {
+      width: 64px;
+      height: 64px;
+      transform: rotate(0deg)
+    }
+    50% {
+      width: 30px;
+      height: 30px;
+      transform: rotate(180deg)
+    }
+    100% {
+      width: 64px;
+      height: 64px;
+      transform: rotate(360deg)
+    }
+  }
+
+
+
+.unvisible {
+  display: none;
+}
+
+.cat-info-desc-desc,
+.cat-info-desc-temp {
+  line-height: 150%;
+}
+
+.cat-info {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .cat-info {
+    flex-direction: row;
+  }
+}
